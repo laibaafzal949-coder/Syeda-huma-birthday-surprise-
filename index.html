@@ -3,457 +3,488 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday Syeda Huma 💗</title>
+<title>Happy Birthday Huma 🎂❤️</title>
 
 <style>
-* {
-  box-sizing: border-box;
+*{box-sizing:border-box}
+
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:linear-gradient(135deg,#ffe5ef,#fff8fb);
+color:#5b3948;
+text-align:center;
+overflow-x:hidden
 }
 
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #ffe4ec, #fff7f9);
-  color: #5a3945;
-  text-align: center;
-  overflow-x: hidden;
+.screen{
+display:none;
+min-height:100vh;
+padding:35px 20px;
+align-items:center;
+justify-content:center;
+flex-direction:column
 }
 
-.screen {
-  min-height: 100vh;
-  display: none;
-  padding: 45px 22px;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+.active{display:flex}
+
+h1{font-size:38px;margin:12px}
+h2{font-size:30px;margin:12px}
+
+p{
+font-size:18px;
+line-height:1.7;
+max-width:700px
 }
 
-.screen.active {
-  display: flex;
+button{
+border:0;
+background:#df83a5;
+color:white;
+padding:14px 25px;
+border-radius:30px;
+font-size:17px;
+margin:12px;
+box-shadow:0 6px 18px #0002;
+cursor:pointer
 }
 
-h1 {
-  font-size: 38px;
-  margin-bottom: 12px;
+button:active{transform:scale(.95)}
+
+.heart{
+font-size:55px;
+animation:beat 1.2s infinite
 }
 
-h2 {
-  font-size: 30px;
-}
-
-p {
-  font-size: 18px;
-  line-height: 1.7;
-  max-width: 650px;
-}
-
-button {
-  border: none;
-  padding: 14px 25px;
-  border-radius: 30px;
-  background: #e889a8;
-  color: white;
-  font-size: 17px;
-  margin: 12px;
-  cursor: pointer;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.12);
-}
-
-button:active {
-  transform: scale(0.95);
-}
-
-.small {
-  font-size: 15px;
-  opacity: 0.8;
+@keyframes beat{
+50%{transform:scale(1.2)}
 }
 
 /* Balloons */
-.balloons {
-  display: flex;
-  gap: 18px;
-  margin: 30px 0;
-  flex-wrap: wrap;
-  justify-content: center;
+.balloons{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+justify-content:center;
+margin:30px
 }
 
-.balloon {
-  width: 75px;
-  height: 95px;
-  border-radius: 50%;
-  background: #f59ab6;
-  position: relative;
-  cursor: pointer;
-  animation: float 2s infinite ease-in-out;
+.balloon{
+width:75px;
+height:95px;
+border-radius:50%;
+background:#f28eae;
+position:relative;
+cursor:pointer;
+animation:float 2s infinite
 }
 
-.balloon:nth-child(2) {
-  background: #f7c5d5;
-  animation-delay: .3s;
+.balloon:nth-child(2){background:#e9abc1}
+.balloon:nth-child(3){background:#d77d9d}
+.balloon:nth-child(4){background:#f5b6ca}
+
+.balloon:after{
+content:"";
+position:absolute;
+height:55px;
+width:2px;
+background:#777;
+top:94px;
+left:50%
 }
 
-.balloon:nth-child(3) {
-  background: #d98eac;
-  animation-delay: .6s;
+@keyframes float{
+50%{transform:translateY(-12px)}
 }
 
-.balloon:nth-child(4) {
-  background: #f3b6ca;
-  animation-delay: .9s;
-}
-
-.balloon::after {
-  content: "";
-  position: absolute;
-  width: 2px;
-  height: 55px;
-  background: #777;
-  top: 94px;
-  left: 50%;
-}
-
-.popped {
-  display: none;
-}
-
-@keyframes float {
-  50% {
-    transform: translateY(-12px);
-  }
+.popped{
+visibility:hidden;
+transform:scale(1.5)
 }
 
 /* Gift */
-.gift {
-  font-size: 110px;
-  cursor: pointer;
-  animation: bounce 1.3s infinite;
+.gift{
+font-size:110px;
+cursor:pointer;
+animation:bounce 1.3s infinite
 }
 
-@keyframes bounce {
-  50% {
-    transform: translateY(-12px);
-  }
+@keyframes bounce{
+50%{transform:translateY(-12px)}
 }
 
 /* Memories */
-.memories {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  max-width: 1000px;
+.memories{
+display:flex;
+flex-wrap:wrap;
+gap:22px;
+justify-content:center;
+max-width:1000px
 }
 
-.memory {
-  background: white;
-  padding: 10px 10px 18px;
-  border-radius: 8px;
-  box-shadow: 0 8px 20px rgba(0,0,0,.15);
-  width: 280px;
-  transform: rotate(-2deg);
+.memory{
+background:white;
+padding:10px 10px 15px;
+width:280px;
+box-shadow:0 8px 22px #0002;
+border-radius:8px
 }
 
-.memory:nth-child(2) {
-  transform: rotate(2deg);
+.memory:nth-child(1){transform:rotate(-3deg)}
+.memory:nth-child(2){transform:rotate(3deg)}
+.memory:nth-child(3){transform:rotate(-2deg)}
+
+.memory img{
+width:100%;
+height:300px;
+object-fit:cover;
+border-radius:5px
 }
 
-.memory:nth-child(3) {
-  transform: rotate(-1deg);
-}
-
-.memory img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 5px;
-}
-
-.memory p {
-  font-size: 15px;
-  margin: 10px 0 0;
+.memory p{
+font-size:15px;
+margin:10px 3px
 }
 
 /* Letter */
-.letter {
-  background: rgba(255,255,255,.8);
-  padding: 25px;
-  border-radius: 22px;
-  max-width: 750px;
-  box-shadow: 0 8px 25px rgba(0,0,0,.1);
-  text-align: left;
+.letter{
+background:#ffffffd9;
+padding:25px;
+border-radius:22px;
+max-width:750px;
+box-shadow:0 8px 25px #0002;
+text-align:left
 }
 
-.final {
-  font-size: 23px;
-  font-weight: bold;
-}
-
-.heart {
-  font-size: 45px;
-  animation: heartbeat 1.2s infinite;
-}
-
-@keyframes heartbeat {
-  50% {
-    transform: scale(1.2);
-  }
+.final{
+font-size:23px;
+font-weight:bold
 }
 </style>
 </head>
 
 <body>
 
-<!-- SCREEN 1 -->
-<section class="screen active" id="screen1">
-  <div class="heart">💗</div>
-  <h1>A Little Birthday Surprise 🎂</h1>
-  <p>Something special is waiting for you...</p>
-
-  <button onclick="startMusic()">
-    🎵 Tap to Play Music
-  </button>
-
-  <button id="beginBtn" style="display:none;" onclick="showScreen(2)">
-    Let's Begin ✨
-  </button>
-
-  <p class="small">Turn your volume up a little 🤍</p>
-</section>
-
-
-<!-- SCREEN 2 -->
-<section class="screen" id="screen2">
-  <h2>Pop the Balloons! 🎈</h2>
-  <p>Pop all the balloons to unlock your surprise.</p>
-
-  <div class="balloons">
-    <div class="balloon" onclick="popBalloon(this)"></div>
-    <div class="balloon" onclick="popBalloon(this)"></div>
-    <div class="balloon" onclick="popBalloon(this)"></div>
-    <div class="balloon" onclick="popBalloon(this)"></div>
-  </div>
-
-  <p id="balloonMessage"></p>
-
-  <button id="balloonNext" style="display:none;" onclick="showScreen(3)">
-    Continue 💌
-  </button>
-</section>
-
-
-<!-- SCREEN 3 -->
-<section class="screen" id="screen3">
-  <div class="heart">💌</div>
-
-  <h2>A Little Something About Us</h2>
-
-  <p>
-    You're not just my friend, you're honestly like my sister.
-    You're the person I can talk to when I'm bored, the person I can
-    gossip with about literally everything, and the person I can roast
-    without even thinking twice 😂.
-    <br><br>
-    Somehow, we always know what's happening in each other's lives.
-    From random talks to serious problems, from laughing at the
-    stupidest things to giving each other advice — we've shared it all.
-  </p>
-
-  <button onclick="showScreen(4)">
-    Continue 🎁
-  </button>
-</section>
-
-
-<!-- SCREEN 4 -->
-<section class="screen" id="screen4">
-  <h2>There's Something Waiting For You 🎁</h2>
-
-  <div class="gift" onclick="openGift()">🎁</div>
-
-  <p id="giftMessage">Tap the gift to open it!</p>
-
-  <button id="giftNext" style="display:none;" onclick="showScreen(5)">
-    Continue 🧸
-  </button>
-</section>
-
-
-<!-- SCREEN 5 -->
-<section class="screen" id="screen5">
-  <h2>Our Memories 🤍</h2>
-
-  <p>Three pictures, countless memories.</p>
-
-  <div class="memories">
-
-    <div class="memory">
-      <img src="memory1.jpg" alt="Our memory">
-      <p>One of those little moments I'll always remember. 🤍</p>
-    </div>
-
-    <div class="memory">
-      <img src="memory2.jpg" alt="Our memory">
-      <p>Because somehow every picture with you becomes a memory. 😂❤️</p>
-    </div>
-
-    <div class="memory">
-      <img src="memory3.jpg" alt="Our memory">
-      <p>Us being us — and honestly, that's enough. 🥹</p>
-    </div>
-
-  </div>
-
-  <button onclick="showScreen(6)">
-    Continue 💗
-  </button>
-</section>
-
-
-<!-- SCREEN 6 -->
-<section class="screen" id="screen6">
-  <h2>For My Sister By Heart 🤍</h2>
-
-  <div class="letter">
-
-    <p>
-      Happy Birthday to one of the most precious people in my life. ❤️
-      <br><br>
-
-      I don't think the word "friend" is enough to describe what you
-      are to me. You're more like a sister — the kind of sister who
-      listens to all my nonsense, knows what's going on in my life,
-      gives me advice when I need it and somehow always knows how to
-      make things feel a little easier.
-      <br><br>
-
-      You're my gossip partner, my boredom cure, my roasting partner,
-      my advice person and one of the people I can tell almost
-      everything to. 😂❤️
-      <br><br>
-
-      What I love most about us is that no matter what someone says,
-      we've never allowed other people's words to come between us.
-      We've laughed together, talked about our lives, shared our
-      problems and supported each other through so many little things.
-      <br><br>
-
-      I genuinely value you more than I can explain. Out of all my
-      friendships, you have a very special place in my heart.
-      You have always felt like family to me, and I'm honestly so
-      grateful that Allah gave me a person like you.
-      <br><br>
-
-      I pray that Allah makes your life beautiful in every possible
-      way. May He give you happiness that stays, success that makes
-      you proud, peace in your heart, barakah in your life and people
-      around you who genuinely love and respect you.
-      <br><br>
-
-      May Allah protect you from every hardship, guide you towards
-      everything that is best for you, fulfil your beautiful wishes
-      and make every coming year better than the one before.
-      Ameen. 🤲🏻❤️
-      <br><br>
-
-      And whenever life gets difficult, I hope you always remember
-      that you have someone who will listen to you, laugh with you,
-      roast you and stand beside you. 😂
-      <br><br>
-
-      Stay exactly the way you are, because you're genuinely special.
-      I'm extremely lucky to call you my friend, my sister and one of
-      my favourite people. ❤️
-    </p>
-
-  </div>
-
-  <button onclick="showScreen(7)">
-    One Last Thing ✨
-  </button>
-</section>
-
-
-<!-- SCREEN 7 -->
-<section class="screen" id="screen7">
-
-  <div class="heart">❤️</div>
-
-  <h1>Happy Birthday, Syeda Huma! 🎂</h1>
-
-  <p class="final">
-    May Allah fill your life with happiness, love, success,
-    peace and countless beautiful memories.
-  </p>
-
-  <p>
-    Keep smiling, keep shining and keep annoying me forever. 😂
-    <br><br>
-    Love you loads, my sister by heart. 🤍
-  </p>
-
-  <div style="font-size:60px;">
-    🎂🎈🎁🧸💗✨
-  </div>
-
-</section>
-
-
 <!-- MUSIC -->
 <audio id="music" loop>
-  <source src="birthday.mp3" type="audio/mpeg">
+<source src="saavane-happy-birthday-254480.mp3" type="audio/mpeg">
 </audio>
+
+
+<!-- 1 -->
+<section class="screen active" id="screen1">
+
+<div class="heart">💗</div>
+
+<h1>A Little Birthday Surprise 🎂</h1>
+
+<p>Something special is waiting for you...</p>
+
+<button onclick="playMusic()">🎵 Tap to Play Music</button>
+
+<button id="begin" style="display:none" onclick="next(2)">
+Let's Begin ✨
+</button>
+
+<p>Turn your volume up a little 🤍</p>
+
+</section>
+
+
+<!-- 2 -->
+<section class="screen" id="screen2">
+
+<h2>Pop the Balloons! 🎈</h2>
+
+<p>Pop all the balloons to unlock your surprise!</p>
+
+<div class="balloons">
+
+<div class="balloon" onclick="pop(this)"></div>
+<div class="balloon" onclick="pop(this)"></div>
+<div class="balloon" onclick="pop(this)"></div>
+<div class="balloon" onclick="pop(this)"></div>
+
+</div>
+
+<p id="popText"></p>
+
+<button id="balloonNext" style="display:none" onclick="next(3)">
+Continue 💌
+</button>
+
+</section>
+
+
+<!-- 3 -->
+<section class="screen" id="screen3">
+
+<div class="heart">💌</div>
+
+<h2>A Little Something About Us</h2>
+
+<p>
+You're not just my friend, you're honestly like my sister.
+You're the person I can talk to whenever I'm bored, my gossip
+partner, my roasting partner and one of the people who knows
+what is happening in my life. 😂❤️
+<br><br>
+From random gossip to serious conversations, from laughing at
+the most stupid things to giving each other advice, we've shared
+so many little moments together.
+<br><br>
+And honestly, having someone like you in my life is something
+I'm genuinely grateful for. 🤍
+</p>
+
+<button onclick="next(4)">Continue 🎁</button>
+
+</section>
+
+
+<!-- 4 -->
+<section class="screen" id="screen4">
+
+<h2>A Special Gift For You 🎁</h2>
+
+<p>Something cute is waiting inside...</p>
+
+<div class="gift" onclick="openGift()">🎁</div>
+
+<p id="giftText">Tap the gift to open it!</p>
+
+<button id="giftNext" style="display:none" onclick="next(5)">
+Continue 🧸
+</button>
+
+</section>
+
+
+<!-- 5 -->
+<section class="screen" id="screen5">
+
+<h2>Our Memories 🤍</h2>
+
+<p>Three pictures, countless memories. 📸</p>
+
+<div class="memories">
+
+<div class="memory">
+<img src="IMG_8361.jpeg">
+<p>One of those little moments I'll always remember. 🤍</p>
+</div>
+
+<div class="memory">
+<img src="IMG_8362.jpeg">
+<p>Because somehow every picture with you becomes a memory. 😂❤️</p>
+</div>
+
+<div class="memory">
+<img src="IMG_8364.jpeg">
+<p>Us being us — and honestly, that's enough. 🥹</p>
+</div>
+
+</div>
+
+<button onclick="next(6)">Continue 💗</button>
+
+</section>
+
+
+<!-- 6 -->
+<section class="screen" id="screen6">
+
+<h2>For My Sister By Heart 🤍</h2>
+
+<div class="letter">
+
+<p>
+
+Happy Birthday to one of the most precious people in my life. ❤️
+
+<br><br>
+
+I don't think the word "friend" is enough to describe what you
+are to me. You're more like a sister — a person who listens to
+all my nonsense, knows what is going on in my life, gives me
+advice when I need it and somehow always knows how to make
+things feel a little easier.
+
+<br><br>
+
+You're my gossip partner, my boredom cure, my roasting partner,
+my advice person and one of those people I can tell almost
+everything to. 😂❤️
+
+<br><br>
+
+I love the fact that we can talk about literally anything —
+what is happening at home, what is happening in our lives,
+random gossip, serious problems and all the little things in
+between.
+
+<br><br>
+
+And one thing I genuinely love about us is that we have never
+allowed someone else's words to come between us. We've always
+understood each other and stayed there for each other.
+
+<br><br>
+
+You have always given me advice like an elder sister. Whenever
+something bad happens to me, you help me understand the situation
+and somehow help me find my way out of it. And honestly, you've
+never made me feel like I am alone.
+
+<br><br>
+
+Out of all my friendships, you have a very special place in my
+heart. I have kept you above so many people because you're not
+just a friend to me. You're family. You're my sister by heart. 🤍
+
+<br><br>
+
+I genuinely pray that Allah makes your coming years more
+beautiful than your past. May Allah bless you with happiness,
+success, peace, good health, barakah and everything your heart
+truly wishes for.
+
+<br><br>
+
+May Allah protect you from every hardship, every sadness and
+every person who is not good for you. May He guide you towards
+what is best for you and open doors of happiness and success
+that you never expected.
+
+<br><br>
+
+May every coming year bring you closer to your dreams. May Allah
+keep your heart peaceful, your smile permanent and your life
+filled with beautiful moments.
+
+<br><br>
+
+And whenever life gets difficult, remember that you have someone
+who will listen to you, laugh with you, roast you, gossip with
+you and stand beside you. 😂❤️
+
+<br><br>
+
+I'm genuinely so thankful that Allah gave me a person like you.
+I hope our bond stays this strong forever.
+
+<br><br>
+
+Stay happy. Stay blessed. Keep smiling. And please keep
+annoying me forever. 😂🤍
+
+<br><br>
+
+Happy Birthday once again to my best friend, my sister by heart
+and one of the most special people in my life.
+
+<br><br>
+
+May Allah always keep you happy and protected.
+
+Ameen. 🤲🏻❤️
+
+</p>
+
+</div>
+
+<button onclick="next(7)">One Last Thing ✨</button>
+
+</section>
+
+
+<!-- 7 -->
+<section class="screen" id="screen7">
+
+<div class="heart">❤️</div>
+
+<h1>Happy Birthday, Huma! 🎂</h1>
+
+<p class="final">
+May Allah fill your life with happiness, success, peace,
+love and countless beautiful memories.
+</p>
+
+<p>
+Keep smiling, keep shining and keep annoying me forever. 😂
+<br><br>
+Love you loads, my sister by heart. 🤍
+</p>
+
+<div style="font-size:60px">
+🎂🎈🎁🧸💗✨
+</div>
+
+</section>
 
 
 <script>
 
-let popped = 0;
+let popped=0;
 
-function startMusic() {
-  const music = document.getElementById("music");
+function playMusic(){
 
-  music.play().then(() => {
-    document.getElementById("beginBtn").style.display = "inline-block";
-  }).catch(() => {
-    alert("Please tap the music button again 🎵");
-  });
+let music=document.getElementById("music");
+
+music.play().then(function(){
+
+document.getElementById("begin").style.display="inline-block";
+
+}).catch(function(){
+
+alert("Tap the music button again 🎵");
+
+});
+
 }
 
-function showScreen(number) {
+function next(number){
 
-  document.querySelectorAll(".screen").forEach(screen => {
-    screen.classList.remove("active");
-  });
+document.querySelectorAll(".screen").forEach(function(screen){
 
-  document.getElementById("screen" + number).classList.add("active");
+screen.classList.remove("active");
 
-  window.scrollTo(0, 0);
+});
+
+document.getElementById("screen"+number).classList.add("active");
+
+window.scrollTo(0,0);
+
 }
 
-function popBalloon(balloon) {
+function pop(balloon){
 
-  if (balloon.classList.contains("popped")) return;
+if(balloon.classList.contains("popped")) return;
 
-  balloon.classList.add("popped");
-  popped++;
+balloon.classList.add("popped");
 
-  if (popped === 4) {
-    document.getElementById("balloonMessage").innerText =
-      "Yayyy! You unlocked the next surprise! 💗";
+popped++;
 
-    document.getElementById("balloonNext").style.display =
-      "inline-block";
-  }
+if(popped===4){
+
+document.getElementById("popText").innerText=
+"Yayyy! You unlocked your next surprise! 💗";
+
+document.getElementById("balloonNext").style.display="inline-block";
+
 }
 
-function openGift() {
+}
 
-  document.querySelector(".gift").innerText = "🧸";
+function openGift(){
 
-  document.getElementById("giftMessage").innerText =
-    "A little teddy for my favourite person. 🧸❤️";
+document.querySelector(".gift").innerText="🧸";
 
-  document.getElementById("giftNext").style.display =
-    "inline-block";
+document.getElementById("giftText").innerText=
+"A little teddy for my favourite person. 🧸❤️";
+
+document.getElementById("giftNext").style.display="inline-block";
+
 }
 
 </script>
